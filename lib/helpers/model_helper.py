@@ -1,5 +1,5 @@
-from lib.models.monodgp import build_monodgp
+from lib.models.monokey import build_monokey
 
 
 def build_model(cfg):
-    return build_monodgp(cfg)
+    return build_monokey(cfg)
