@@ -24,8 +24,8 @@ def _get_clones(module, N):
     return nn.ModuleList([copy.deepcopy(module) for i in range(N)])
 
 
-class MonoDGP(nn.Module):
-    """ This is the MonoDGP module that performs monocualr 3D object detection """
+class monokey(nn.Module):
+    """ This is the monokey module that performs monocualr 3D object detection """
     def __init__(self, backbone, depth_predictor, det2d_transformer, det3d_transformer,
                   num_classes, num_queries, num_feature_levels, 
                   aux_loss=True, with_box_refine=False, init_box=False, group_num=11):
@@ -353,7 +353,7 @@ class MonoDGP(nn.Module):
 
 
 class SetCriterion(nn.Module):
-    """ This class computes the loss for MonoDGP.
+    """ This class computes the loss for monokey.
     The process happens in two steps:
         1) we compute hungarian assignment between ground truth boxes and the outputs of the model
         2) we supervise each pair of matched ground-truth / prediction (supervise class and box)
@@ -646,7 +646,7 @@ def build(cfg):
     # depth prediction module
     depth_predictor = DepthPredictor(cfg)
 
-    model = MonoDGP(
+    model = monokey(
         backbone = backbone,
         depth_predictor = depth_predictor,
         det2d_transformer = det2d_transformer,
