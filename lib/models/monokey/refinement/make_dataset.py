@@ -68,11 +68,12 @@ def merge_json_with_boxes(flat_json_path, pred_dir, output_path):
 
 # 예시 사용
 if __name__ == "__main__":
-    pred_dir = "../Mono/MonoDGP_ours/output_ffc_key_finetune/monodgp/outputs/data"
+    pred_dir = "dataset/path"
 
     splits = ["train", "val"]
     for split in splits:
         input_json = f"keypoints_with_theta_{split}.json"
         output_json = f"RGR_input_{split}.json"
         merge_json_with_boxes(input_json, pred_dir, output_json)
+
 
