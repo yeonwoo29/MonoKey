@@ -1,7 +1,6 @@
 # MonoKey: Occlusion-Robust Keypoint-based Monocular 3D Object Detection with Prior Guidance
 
 
-This repository hosts the official implementation of [MonoKey: Occlusion-Robust Keypoint-based Monocular 3D Object Detection with Prior Guidance] based on the excellent work [MonoDGP](https://github.com/PuFanqi23/MonoDGP). In this work, we propose a novel keypoint-based monocular method called MonoKey.
 
 ## Installation
 1. Clone this project and create a conda environment:
