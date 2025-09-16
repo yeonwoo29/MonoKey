@@ -1,5 +1,5 @@
-from .monodgp import build
+from .monokey import build
 
 
-def build_monodgp(cfg):
+def build_monokey(cfg):
     return build(cfg)
